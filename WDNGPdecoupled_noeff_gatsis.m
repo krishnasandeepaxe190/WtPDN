@@ -81,7 +81,7 @@ MaxFlowPump = repmat(MaxFlow,[Links,Time]);
 %% Initial flows for the links 
 IntFlowPipes = 200*ones(Pipes,Time);
 IntFlowPumps = 250*ones(Pumps,Time); 
-IntFlowValves = 800*ones(Valves,Time);
+IntFlowValves = 350*ones(Valves,Time);
 IntFlows = [IntFlowPipes;IntFlowPumps;IntFlowValves];
 IntHeads = MinNodalHeads; 
 IntHeads([find(Tau==1)],:) = repmat(NodeTankInitialHead,[Tanks,Time]);  
